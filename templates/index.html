@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <table id = "table">
+            <th>Symbol</th>
+            <th>Name</th>
+            <th>Price</th>
+             <th>Shares</th>
+            <th>Current Value</th>
+
+    {%for row in data %}
+        </tr>
+            <td>{{row.symbol}}</td>
+            <td>{{row['current']['name']}}</td>
+            <td>${{row['current']['price']}}</td>
+            <td>{{row['SUM(nshares)']}}</td>
+            <td>${{row['tot']}}</td>
+        </tr>
+    {% endfor %}
+        <tr>
+            <td>Cash</td>
+            <td>/</td>
+            <td>/</td>
+            <td>/</td>
+            <td>${{cash}}</td>
+        </tr>
+        <tr>
+            <td><b>TOT</b></td>
+            <td>/</td>
+            <td>/</td>
+            <td>/</td>
+            <td><b>${{ass}}</b></td>
+        </tr>
+    </table>
+
+{% endblock %}

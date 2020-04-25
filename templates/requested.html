@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block main %}
+    <table id = "table">
+        <tr>
+            <th></th>
+            <th>Company Name</th>
+            <th>Stock Price</th>
+            <th>Stock Symbol</th>
+
+        </tr>
+            <td><img src="//logo.clearbit.com/{{logo}}.com?size=80"></td>
+            <td>{{name}}</td>
+            <td>{{price}} USD</td>
+            <td>{{sym}}</td>
+
+        </tr>
+    </table>
+{% endblock %}
